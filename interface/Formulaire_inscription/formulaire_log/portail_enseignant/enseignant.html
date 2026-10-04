@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Enseignant | UMMTO</title>
+    <link rel="stylesheet" href="enseignant.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo-section">
+        <img src="logo.png" class="logo" alt="Logo">
+    </div>
+    <div class="nav-buttons">
+        <button class="btn-profile">
+            <div class="status-dot"></div>
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Espace Enseignant</span>
+        </button>
+        <button class="btn-logout" onclick="confirmerDeconnexion()">
+            <i class="fa-solid fa-power-off"></i>
+            Déconnexion
+        </button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-wrapper">
+        <div class="hero-content">
+            <p class="mini-title">UNIVERSITÉ MOULOUD MAMMERI DE TIZI OUZOU</p>
+            <h2 class="dept">Département Informatique</h2>
+            
+            <h1>Espace Enseignant</h1>
+            <p class="description">Gérez facilement les demandes des étudiants et accédez aux services administratifs.</p>
+        </div>
+
+        <div class="teacher-card">
+            <div class="teacher-icon">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="teacher-info">
+                <h3>Bonjour, Enseignant</h3>
+                <p id="live-clock"><i class="fa-regular fa-clock"></i> Bienvenue dans votre espace personnel.<br>
+                Nous sommes ravis de vous accueillir.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cards-container">
+    <div class="card">
+        <div class="card-icon blue">
+            <i class="fa-regular fa-file-lines"></i>
+        </div>
+        <h2>Demandes Étudiants</h2>
+        <p>Consultez et gérez les demandes des étudiants en temps réel.</p>
+        <a href="demandes.html" class="btn-card btn-blue">
+            Accéder aux demandes <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-icon green">
+            <i class="fa-regular fa-folder-open"></i>
+        </div>
+        <h2>Mes Documents</h2>
+        <p>Demandez vos documents administratifs et pédagogiques.</p>
+        <a href="formulaires/vacation.html" class="btn-card btn-green">
+            Accéder aux documents <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<script src="enseignant.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+:root {
+    --primary: #4a72d4; /* La couleur bleue de ton image */
+    --dark: #1b2559;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fe;
+    color: var(--dark);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;
+    border-bottom: 1px solid #e9edf7;
+}
+.logo { width: 300px; }
+
+.nav-buttons { display: flex; gap: 15px; }
+.btn-profile {
+    display: flex; align-items: center; gap: 10px;
+    background: #f0f7ff; border: none; padding: 10px 18px;
+    border-radius: 50px; font-weight: 600; color: #3182ce;
+}
+.status-dot { width: 8px; height: 8px; background: #5361dd; border-radius: 50%; box-shadow: 0 0 8px #01b574; }
+
+.btn-logout {
+    background: linear-gradient(135deg, #5f77ff, #719eff);
+    color: white; border: none; padding: 10px 20px;
+    border-radius: 50px; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+}
+
+/* HERO SECTION - STYLE APPLIQUÉ ICI */
+.hero { padding: 60px 8% 40px; }
+.hero-wrapper { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+
+.mini-title {
+    color: var(--primary);
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.dept {
+    font-size: 20px;
+    color: #4a5568;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.hero h1 { font-size: 52px; font-weight: 800; color: #0f172a; margin-bottom: 15px; }
+.description { font-size: 17px; color: #64748b; max-width: 600px; }
+
+/* TEACHER CARD */
+.teacher-card {
+   position: absolute;
+    right: 0;
+    background: #77a2e7;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.teacher-icon { width: 55px; height: 55px; background: #abd0d4; border-radius: 12px; display: flex; justify-content: center; align-items: center; color: #ffffff; font-size: 22px; }
+
+/* CARDS */
+.cards-container { display: flex; justify-content: center; gap: 30px; padding: 20px 8% 60px; }
+.card { background: white; padding: 35px; border-radius: 22px; width: 400px; box-shadow: 0 10px 30px rgba(163, 174, 208, 0.15); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+
+.card-icon { width: 55px; height: 55px; border-radius: 12px; display: flex; align-items:center; justify-content:center; color:white; font-size: 22px; margin-bottom: 20px;}
+.blue { background: #4318ff; }
+.green { background: #4318ff ; }
+
+.btn-card {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 25px; padding: 14px 20px; border-radius: 12px;
+    text-decoration: none; font-weight: 600; transition: 0.3s;
+}
+.btn-blue { background: #e9f3ff; color: #4318ff; }
+.btn-blue:hover { background: #4318ff; color: white; }
+.btn-green { background: #e6faf5; color: #655be6; }
+.btn-green:hover { background: #197ad4; color: white; }

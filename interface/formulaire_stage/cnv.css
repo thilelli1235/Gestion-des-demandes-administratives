@@ -1,0 +1,339 @@
+/* ================================================
+   CONVENTION DE STAGE — CNV.CSS
+   Style inspiré du formulaire FGEI · UMMTO
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  background: #e8e8e8;
+  color: #1a1a1a;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ── Barre supérieure ── */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #1a2a4a;
+  color: #fff;
+  padding: 10px 32px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.topbar-badge {
+  background: #b8973a;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.topbar-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+.topbar-label { opacity: 0.75; }
+
+/* ── Page principale ── */
+.page {
+  max-width: 820px;
+  margin: 36px auto 60px;
+  background: #fff;
+  border-top: 6px solid #1a2a4a;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  padding: 36px 48px 48px;
+}
+
+/* ── En-tête ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.header-text p { margin: 0; font-size: 13px; line-height: 1.8; }
+.header-text p:first-child { font-weight: 700; font-size: 14px; color: #1a2a4a; }
+.header-text p:nth-child(2) { color: #b8973a; font-size: 12.5px; }
+.header-text p:nth-child(3) { font-weight: 600; }
+
+.logo-img {
+  width: 72px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-left: 20px;
+}
+.back-link {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.back-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: #1a3a5c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.back-link a:hover {
+  background: #2b5080;
+  transform: translateY(-1px);
+}
+/* ── Séparateur ── */
+.ligne-sep {
+  height: 1.5px;
+  background: #d0c9b8;
+  margin: 6px 0 0;
+}
+
+/* ── Titre principal (fond bleu foncé, pleine largeur) ── */
+.titre-box {
+  background: #1a2a4a;
+  margin: 20px -48px 28px;
+  padding: 14px 48px;
+  text-align: center;
+}
+.titre-box h1 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+/* ── Numéro ── */
+.numero {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ── Section headers ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+.section-pill {
+  background: #1a2a4a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 11px;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.section-pill.or { background: #b8973a; }
+
+.section-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1a2a4a;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: #d0c9b8;
+}
+
+/* ── Blocs ── */
+.bloc-entre, .bloc-et { margin-bottom: 6px; }
+
+/* ── Parties ── */
+.partie { padding: 0 4px; }
+.partie.indent { padding-left: 12px; }
+
+.ligne-fixe {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1a2a4a;
+  margin-bottom: 2px;
+}
+
+/* ── Ligne champ : séparée par border-bottom ── */
+.champ-ligne {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+.champ-ligne:first-of-type { border-top: 1px solid #ddd; }
+
+.label {
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+  font-size: 13.5px;
+  flex-shrink: 0;
+}
+.label.ml { margin-left: 16px; }
+
+/* ── Champs éditables ── */
+.champ {
+  outline: none;
+  border: none;
+  min-height: 20px;
+  padding: 1px 4px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #999;
+  background: transparent;
+  cursor: text;
+}
+.champ:focus { color: #1a2a4a; }
+.champ.small  { min-width: 50px; display: inline-block; }
+.champ.medium { min-width: 110px; display: inline-block; }
+.champ.flex   { flex: 1; display: inline-block; min-width: 100px; }
+
+/* ── Inputs ── */
+.email-input {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: #999;
+  padding: 1px 4px;
+  outline: none;
+  flex: 1;
+  min-width: 140px;
+}
+.email-input:focus { color: #1a2a4a; }
+.email-input::placeholder { color: #bbb; font-style: italic; font-size: 12.5px; }
+.email-input.valid   { color: #059669; }
+.email-input.invalid { color: #dc2626; }
+
+/* ── Message validation email ── */
+.email-row { align-items: center; }
+.email-msg { font-size: 11px; font-weight: 700; white-space: nowrap; }
+.email-msg.ok  { color: #059669; }
+.email-msg.err { color: #dc2626; }
+
+/* ── Mention ── */
+.mention-part {
+  text-align: right;
+  font-style: italic;
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* ── Il a été convenu ── */
+.convenu {
+  border-top: 1px dashed #ccc;
+  padding-top: 14px;
+  margin-top: 8px;
+  font-style: italic;
+  color: #666;
+  font-size: 13px;
+}
+
+/* ══ BOUTONS — centrés ══ */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+}
+.btn-icon {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.btn-envoyer {
+  background: #b8973a;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(184,151,58,.3);
+}
+.btn-envoyer:hover {
+  background: #9e7e2e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(184,151,58,.38);
+}
+
+.btn-imprimer {
+  background: #1a2a4a;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(26,42,74,.22);
+}
+.btn-imprimer:hover {
+  background: #0f1e36;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(26,42,74,.3);
+}
+
+.btn-reset {
+  background: #f0ece2;
+  color: #555;
+  border: 1px solid #d0c9b8;
+}
+.btn-reset:hover {
+  background: #e4dfd0;
+  transform: translateY(-1px);
+}
+
+/* ── Message succès ── */
+.msg-success {
+  display: none;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+  padding: 12px 18px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ── Impression ── */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; padding: 20px 32px; }
+  .titre-box { margin: 20px -32px 24px; }
+  .champ, .email-input { color: #000; }
+}

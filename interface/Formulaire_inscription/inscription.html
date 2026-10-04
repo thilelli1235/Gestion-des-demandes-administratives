@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription Enseignant</title>
+    <link rel="stylesheet" href="inscription.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Créer un compte Enseignant</h2>
+    <hr class="separator">
+
+    <!-- action → inscription.php qui est à la RACINE (même dossier qu'inscription.html) -->
+    <form action="inscription.php" method="POST">
+
+        <!-- Département -->
+        <label>Département</label>
+        <select name="departement" required>
+            <option value="">-- Choisir --</option>
+            <option>Informatique</option>
+            <option>Mathématiques</option>
+            <option>Physique</option>
+        </select>
+
+        <!-- Nom / Prénom -->
+        <div class="row">
+            <div>
+                <label>Nom</label>
+                <input type="text" id="nom" placeholder="Nom" name="nom" required>
+            </div>
+            <div>
+                <label>Prénom</label>
+                <input type="text" id="prenom" placeholder="Prénom" name="prenom" required>
+            </div>
+        </div>
+
+        <!-- Grade -->
+        <label>Grade</label>
+        <input type="text" placeholder="Ex: Maître de conférences" name="grade" required>
+
+        <!-- Email + Téléphone -->
+        <div class="row">
+            <div>
+                <label>Email institutionnel</label>
+                <input type="email" id="email" name="email_institutionnel">
+            </div>
+            <div>
+                <label>Téléphone</label>
+                <input type="tel" name="telephone" required>
+            </div>
+        </div>
+
+        <!-- Username -->
+        <label>Nom d'utilisateur</label>
+        <input type="text" id="username" name="nom_utilisateur">
+
+        <!-- Password -->
+        <label>Mot de passe</label>
+        <input type="password" id="password" name="mot_de_passe" required>
+
+        <button type="submit">S'inscrire</button>
+
+        <div class="back-link">
+            <!-- log.html est dans formulaire_log/ -->
+            <a href="formulaire_log/log.html">⬅ Retour à la connexion</a>
+        </div>
+
+    </form>
+</div>
+
+<script src="inscription.js"></script>
+
+</body>
+</html>

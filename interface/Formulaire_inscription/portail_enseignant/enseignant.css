@@ -1,0 +1,241 @@
+:root {
+    --primary: #4a72d4;
+    --dark:    #1b2559;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fe;
+    color: var(--dark);
+}
+
+/* ── NAVBAR ────────────────────────────────────── */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;
+    border-bottom: 1px solid #e9edf7;
+    position: relative;
+    z-index: 10;
+}
+
+.logo { width: 180px; height: auto; }
+
+.nav-buttons { display: flex; gap: 15px; align-items: center; }
+
+.btn-profile {
+    display: flex; align-items: center; gap: 10px;
+    background: #f0f7ff; border: none; padding: 10px 18px;
+    border-radius: 50px; font-weight: 600; color: #3182ce;
+    font-family: 'Poppins', sans-serif; cursor: default;
+}
+
+.status-dot {
+    width: 8px; height: 8px;
+    background: #10b981; border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(16,185,129,.25);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 2px rgba(16,185,129,.25); }
+    50%      { box-shadow: 0 0 0 5px rgba(16,185,129,.08); }
+}
+
+.btn-logout {
+    background: linear-gradient(135deg, #5f77ff, #719eff);
+    color: white; border: none; padding: 10px 20px;
+    border-radius: 50px; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: opacity .2s, transform .15s;
+}
+.btn-logout:hover { opacity: .88; transform: translateY(-1px); }
+
+/* ── HERO ──────────────────────────────────────── */
+.hero { padding: 60px 8% 40px; }
+
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.hero-content { flex: 1; }
+
+.mini-title {
+    color: var(--primary);
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.dept {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 15px;
+    line-height: 1.15;
+}
+
+.description {
+    font-size: 16px;
+    color: #64748b;
+    max-width: 520px;
+    line-height: 1.7;
+}
+
+/* ── TEACHER CARD ──────────────────────────────── */
+.teacher-card {
+    background: linear-gradient(135deg, #5f77ff, #77a2e7);
+    color: white;
+    padding: 22px 26px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(95,119,255,.25);
+    min-width: 280px;
+    flex-shrink: 0;
+}
+
+.teacher-icon {
+    width: 52px; height: 52px;
+    background: rgba(255,255,255,.2);
+    border-radius: 12px;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 22px; flex-shrink: 0;
+}
+
+.teacher-info h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.teacher-info p  { font-size: 13px; opacity: .85; line-height: 1.5; }
+
+/* ── CARDS ─────────────────────────────────────── */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 8% 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 22px;
+    width: 380px;
+    box-shadow: 0 10px 30px rgba(163,174,208,.15);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(163,174,208,.25);
+}
+
+.card-icon {
+    width: 55px; height: 55px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 22px; margin-bottom: 20px;
+}
+
+.blue  { background: linear-gradient(135deg, #4318ff, #6b47ff); }
+.green { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+
+.card h2 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+.card p  { color: #64748b; font-size: 14px; line-height: 1.6; }
+
+.btn-card {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 24px; padding: 13px 18px; border-radius: 12px;
+    text-decoration: none; font-weight: 600; font-size: 14px;
+    transition: all .25s;
+}
+
+.btn-blue  { background: #eef3ff; color: #4318ff; }
+.btn-blue:hover  { background: #4318ff; color: white; }
+.btn-green { background: #eff6ff; color: #2563eb; }
+.btn-green:hover { background: #2563eb; color: white; }
+
+/* ── MODAL DÉCONNEXION ─────────────────────────── */
+.modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(15,23,46,.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-overlay.open { display: flex; }
+
+.modal-box {
+    background: white;
+    border-radius: 24px;
+    padding: 44px 48px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 32px 80px rgba(0,0,0,.2);
+    animation: popIn .28s cubic-bezier(.34,1.56,.64,1);
+}
+
+@keyframes popIn {
+    from { transform: scale(.82); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.modal-emoji  { font-size: 52px; margin-bottom: 16px; }
+.modal-title  { font-size: 19px; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+.modal-desc   { font-size: 14px; color: #64748b; margin-bottom: 30px; line-height: 1.6; }
+
+.modal-actions { display: flex; gap: 12px; justify-content: center; }
+
+.modal-btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all .2s;
+}
+
+.modal-btn-cancel {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1.5px solid #e2e8f0;
+}
+.modal-btn-cancel:hover { background: #e2e8f0; }
+
+.modal-btn-confirm {
+    background: linear-gradient(135deg, #5f77ff, #719eff);
+    color: white;
+    box-shadow: 0 4px 18px rgba(95,119,255,.4);
+}
+.modal-btn-confirm:hover {
+    background: linear-gradient(135deg, #4a62ef, #5f8aff);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(95,119,255,.5);
+}

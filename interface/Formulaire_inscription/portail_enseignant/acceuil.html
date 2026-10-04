@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portail Numérique - UMMTO Informatique</title>
+    <link rel="stylesheet" href="acceuil1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-clean"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-area">
+                <img src="logo.png" alt="Logo UMMTO" class="logo-ummto">
+                <div class="divider"></div>
+                <span class="dept-name">Département Informatique</span>
+            </div>
+            <div class="auth-group">
+                <a href="enseignant.html" class="nav-btn btn-teacher">
+                    <i class="fas fa-chalkboard-teacher"></i> Espace Enseignant
+                </a>
+                <a href="admin.html" class="nav-btn btn-admin">
+                    <i class="fas fa-user-shield"></i> Espace Administratif
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h4 class="uni-name">UNIVERSITÉ MOULOUD MAMMERI DE TIZI OUZOU</h4>
+            <h1 class="title">  Titre de l'app</h1>
+            <p class="description">Bienvenue sur le portail numérique centralisé. Accédez à vos documents administratifs et pédagogiques en quelques clics.</p>
+        </div>
+
+        <section class="services-grid">
+            <div class="service-card" onclick="location.href='#form-stage'">
+                <div class="card-icon blue-grad">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <h3>Convention de Stage</h3>
+                <p>Formulaires de demande et suivi pour les stages en entreprise.</p>
+                  <a href="form_stage.html"  >
+                       <span class="action-link">Accéder au service <i class="fas fa-chevron-right"></i></span>
+                </a> 
+            </div>
+
+            <div class="service-card" onclick="location.href='#form-pv'">
+                <div class="card-icon green-grad">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>PV de Soutenance</h3>
+                <p>Gestion des procès-verbaux et documents de fin de cycle.</p>
+                 <a href="form_soutenance.html"  >
+                       <span class="action-link">Accéder au service <i class="fas fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="acceuil1.js"></script>
+</body>
+</html>
+

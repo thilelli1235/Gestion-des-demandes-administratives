@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demande d'Autorisation de Vacation — FGEI · UMMTO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="vacation.css" />
+</head>
+<body>
+
+  <div class="topbar no-print">
+    <span class="topbar-badge">FGEI · UMMTO</span>
+    <div class="topbar-line"></div>
+    <span class="topbar-label">Portail Numérique Administratif</span>
+  </div>
+
+  <div class="page" id="printable">
+
+    <div class="header">
+      <div class="header-text">
+        <p>Université Mouloud Mammeri de Tizi-Ouzou</p>
+        <p>Faculté de Génie Électrique et d'Informatique</p>
+        <p class="dept">Département : Informatique</p>
+        <p class="annee">
+          Année universitaire :
+          <span class="champ small" contenteditable="true"></span>/
+          <span class="champ small" contenteditable="true"></span>
+        </p>
+      </div>
+      <img src="logo.png" alt="Logo UMMTO" class="logo-img" />
+    </div>
+
+    <div class="ligne-sep"></div>
+
+    <div class="titre-box">
+      <h1>Demande d'Autorisation de Vacation</h1>
+    </div>
+
+    <form action="vacation.php" method="POST" id="formVacation">
+
+      <!-- SECTION I -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-pill">I</span>
+          <span class="section-label">Renseignements concernant l'intervenant</span>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="partie indent">
+
+          <div class="champ-ligne">
+            <span class="label">Nom :</span>
+            <input type="text" name="nom" class="champ-input flex" required placeholder="Nom de famille">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Prénom :</span>
+            <input type="text" name="prenom" class="champ-input flex" required placeholder="Prénom">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Date et lieu de naissance :</span>
+            <input type="text" name="date_lieu_naissance" class="champ-input flex" placeholder="JJ/MM/AAAA — Ville">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Grade :</span>
+            <input type="text" name="grade" class="champ-input flex" required placeholder="Ex: Maître de conférences">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Dernier diplôme obtenu + équivalence :</span>
+            <input type="text" name="diplome" class="champ-input flex" placeholder="Ex: Doctorat en Informatique">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Compte CCP N° :</span>
+            <input type="text" name="ccp" class="champ-input flex" placeholder="Numéro CCP">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Adresse du domicile :</span>
+            <input type="text" name="adresse" class="champ-input flex" placeholder="Adresse complète">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">À compter du :</span>
+            <input type="date" name="date_debut" class="champ-input flex" required>
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Auprès du département :</span>
+            <input type="text" name="departement_accueil" class="champ-input flex" placeholder="Ex: Informatique">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Faculté :</span>
+            <input type="text" name="faculte" class="champ-input flex" placeholder="Ex: FGEI">
+          </div>
+
+          <div class="champ-ligne">
+            <span class="label">Université :</span>
+            <input type="text" name="universite" class="champ-input flex" value="Université Mouloud Mammeri de Tizi-Ouzou">
+          </div>
+
+        </div>
+
+        <div class="signature-bloc">
+          <p>Fait à Tizi-Ouzou, le <span class="champ date-champ" contenteditable="true"></span></p>
+          <p class="sig-label">Signature de l'intervenant</p>
+          <div class="sig-zone"></div>
+        </div>
+      </div>
+
+      <div class="separateur"></div>
+
+      <!-- SECTION II -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-pill">II</span>
+          <span class="section-label">Cadre réservé au chef du département d'origine</span>
+          <div class="section-line"></div>
+        </div>
+        <p class="corps-texte">
+          Je soussigné, chef du département
+          <span class="champ flex-champ" contenteditable="true"></span>
+          atteste que l'enseignant susnommé assure la totalité de son volume horaire statutaire.
+          J'émets donc un avis favorable pour
+          <span class="champ small" contenteditable="true"></span>
+          heures par semaine.
+        </p>
+        <div class="signature-bloc">
+          <p>Fait à Tizi-Ouzou, le <span class="champ date-champ" contenteditable="true"></span></p>
+          <p class="sig-label">Cachet &amp; Signature</p>
+          <div class="sig-zone"></div>
+        </div>
+      </div>
+
+      <div class="separateur"></div>
+
+      <!-- SECTION III -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-pill">III</span>
+          <span class="section-label">Cadre réservé au chef du département d'accueil</span>
+          <div class="section-line"></div>
+        </div>
+        <p class="corps-texte">
+          Le chef du département
+          <span class="champ flex-champ" contenteditable="true"></span>
+          soussigné, atteste que l'enseignant susnommé a été installé dans ses fonctions le
+          <span class="champ medium-champ" contenteditable="true"></span>
+          en vue d'assurer une charge pédagogique de
+          <span class="champ small" contenteditable="true"></span>
+          heures par semaine.
+        </p>
+        <div class="signature-bloc">
+          <p>Fait à Tizi-Ouzou, le <span class="champ date-champ" contenteditable="true"></span></p>
+          <p class="sig-label">Cachet &amp; Signature</p>
+          <div class="sig-zone"></div>
+        </div>
+      </div>
+
+      <!-- BOUTONS -->
+      <div class="actions no-print">
+        <button type="submit" class="btn btn-envoyer">
+          <svg viewBox="0 0 24 24" class="btn-icon"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Envoyer la demande
+        </button>
+        <button type="button" class="btn btn-imprimer" id="btnImprimer">
+          <svg viewBox="0 0 24 24" class="btn-icon"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimer
+        </button>
+        <button type="button" class="btn btn-reset" id="btnReset">
+          <svg viewBox="0 0 24 24" class="btn-icon"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/></svg>
+          Réinitialiser
+        </button>
+      </div>
+     
+       <div style="text-align:center; margin-top:24px;" class="no-print">
+  <a href="../enseignant.html" style="color:#1a3a5c;text-decoration:none;font-size:13px;font-weight:600;">
+   ← Retour à la connexion
+  </a>
+</div>
+
+      <div class="msg-success" id="msgSuccess">
+        ✅ Votre demande de vacation a été envoyée avec succès !
+      </div>
+
+    </form>
+
+  </div>
+
+  <script src="vacation.js"></script>
+
+</body>
+</html>

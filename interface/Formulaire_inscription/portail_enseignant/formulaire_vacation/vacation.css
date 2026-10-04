@@ -1,0 +1,506 @@
+/* ================================================
+   DEMANDE D'AUTORISATION DE VACATION — VACATION.CSS
+   Université Mouloud Mammeri de Tizi-Ouzou
+   Faculté de Génie Électrique et d'Informatique
+   ================================================ */
+
+/* === RESET === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === VARIABLES === */
+:root {
+  --bleu:      #1a3a5c;
+  --bleu-mid:  #2b5080;
+  --bleu-pale: #e8eff7;
+  --bleu-acc:  #3a7bd5;
+  --or:        #b8973a;
+  --or-pale:   #faf6ed;
+  --gris-bg:   #dfe4ea;
+  --gris-bord: #c2c8d2;
+  --texte:     #1c2330;
+  --texte-sec: #4a5568;
+  --blanc:     #ffffff;
+  --rouge:     #c0392b;
+  --radius:    4px;
+}
+
+/* === BODY === */
+body {
+  background: var(--gris-bg);
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-size: 13.5px;
+  color: var(--texte);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 12px 80px;
+  min-height: 100vh;
+}
+
+/* ================================================
+   BARRE TOP
+   ================================================ */
+.topbar {
+  width: 210mm;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.back-link {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.back-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: #1a3a5c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.back-link a:hover {
+  background: #2b5080;
+  transform: translateY(-1px);
+}
+.topbar-badge {
+  background: var(--bleu);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+}
+
+.topbar-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--bleu), transparent);
+}
+
+.topbar-label {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ================================================
+   PAGE A4
+   ================================================ */
+.page {
+  background: var(--blanc);
+  width: 210mm;
+  min-height: 297mm;
+  padding: 14mm 16mm 18mm;
+  box-shadow: 0 4px 32px rgba(0,0,0,.13), 0 1px 4px rgba(0,0,0,.08);
+  position: relative;
+  border-top: 5px solid var(--bleu);
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--or) 0%, var(--bleu) 40%, var(--bleu-pale) 100%);
+}
+
+/* ================================================
+   EN-TÊTE
+   ================================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--bleu-pale);
+  margin-bottom: 6px;
+}
+
+.header-text p {
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: var(--texte-sec);
+  font-weight: 300;
+}
+
+.header-text p:first-child {
+  font-weight: 600;
+  color: var(--bleu);
+  font-size: 12px;
+}
+
+.header-text .dept {
+  font-weight: 500;
+  color: var(--texte);
+  font-size: 12px;
+}
+
+.header-text .annee {
+  font-weight: 400;
+  font-size: 11.5px;
+  color: var(--texte-sec);
+  margin-top: 3px;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.15));
+}
+
+/* ================================================
+   FILET DÉCORATIF
+   ================================================ */
+.ligne-sep {
+  height: 2px;
+  background: linear-gradient(to right, var(--or), var(--bleu), transparent);
+  margin: 12px 0 22px;
+  border: none;
+}
+
+/* ================================================
+   TITRE
+   ================================================ */
+.titre-box {
+  text-align: center;
+  margin: 0 10mm 24px;
+  padding: 12px 16px;
+  background: var(--bleu);
+  position: relative;
+}
+
+.titre-box::before,
+.titre-box::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 5px;
+  background: var(--or);
+}
+
+.titre-box::before { left: 0; }
+.titre-box::after  { right: 0; }
+
+.titre-box h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ================================================
+   SECTIONS
+   ================================================ */
+.section { margin-bottom: 20px; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.section-pill {
+  background: var(--bleu);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--bleu);
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--bleu-pale);
+}
+
+/* ================================================
+   LIGNES DE FORMULAIRE
+   ================================================ */
+.partie { padding-left: 0; margin-bottom: 10px; }
+
+.partie.indent {
+  padding-left: 14px;
+  border-left: 3px solid var(--bleu-pale);
+}
+
+.champ-ligne {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.label {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--texte-sec);
+  min-width: fit-content;
+}
+
+/* ================================================
+   CHAMPS CONTENTEDITABLE (sections II et III)
+   ================================================ */
+.champ {
+  border: none;
+  border-bottom: 1.5px solid var(--gris-bord);
+  min-height: 20px;
+  outline: none;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-size: 13.5px;
+  padding: 1px 4px;
+  color: var(--texte);
+  cursor: text;
+  display: inline-block;
+  vertical-align: bottom;
+  transition: border-color .2s, background .2s;
+}
+
+.champ:focus {
+  border-bottom-color: var(--bleu-acc);
+  background: var(--bleu-pale);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.champ.small        { width: 60px; }
+.champ.flex         { flex: 1; min-width: 60px; }
+.champ.medium-champ { width: 130px; }
+.champ.date-champ   { width: 150px; }
+.champ.flex-champ   { width: 200px; }
+
+/* ================================================
+   INPUTS FORMULAIRE SECTION I
+   ================================================ */
+.champ-input {
+  border: none;
+  border-bottom: 1.5px solid var(--gris-bord);
+  outline: none;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-size: 13.5px;
+  padding: 2px 4px;
+  color: var(--texte);
+  background: transparent;
+  transition: border-color .2s, background .2s;
+  border-radius: 0;
+}
+
+.champ-input:focus {
+  border-bottom-color: var(--bleu-acc);
+  background: var(--bleu-pale);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.champ-input.flex   { flex: 1; min-width: 60px; }
+.champ-input.small  { width: 60px; }
+.champ-input.medium { width: 130px; }
+.champ-input.date   { width: 150px; }
+
+/* ================================================
+   CORPS DE TEXTE (sections II et III)
+   ================================================ */
+.corps-texte {
+  font-size: 13px;
+  line-height: 2.1;
+  text-align: justify;
+  margin-bottom: 14px;
+  text-indent: 20px;
+  color: var(--texte);
+}
+
+/* ================================================
+   BLOC SIGNATURE
+   ================================================ */
+.signature-bloc { text-align: center; margin-top: 14px; }
+
+.signature-bloc p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--texte-sec);
+}
+
+.sig-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texte-sec);
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  margin-top: 4px;
+}
+
+.sig-zone {
+  width: 180px;
+  height: 58px;
+  border: 1px solid var(--gris-bord);
+  border-radius: var(--radius);
+  background: #fafafa;
+  margin: 8px auto 0;
+}
+
+/* ================================================
+   SÉPARATEUR ENTRE SECTIONS
+   ================================================ */
+.separateur {
+  height: 2px;
+  background: linear-gradient(to right, var(--bleu-pale), var(--gris-bord), var(--bleu-pale));
+  margin: 22px 0 20px;
+  border: none;
+}
+
+/* ================================================
+   BOUTONS
+   ================================================ */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 28px;
+  font-size: 13px;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  letter-spacing: .4px;
+  transition: all .2s;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.btn-imprimer {
+  background: var(--bleu);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(26,58,92,.25);
+}
+
+.btn-imprimer:hover {
+  background: var(--bleu-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(26,58,92,.3);
+}
+
+.btn-reset {
+  background: transparent;
+  color: var(--texte-sec);
+  border: 1.5px solid var(--gris-bord);
+}
+
+.btn-reset:hover {
+  border-color: var(--rouge);
+  color: var(--rouge);
+  background: #fdf3f2;
+}
+
+/* ── Bouton Envoyer ── */
+.btn-envoyer {
+  background: var(--or);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(184,151,58,.3);
+}
+
+.btn-envoyer:hover {
+  background: #9e7e2e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(184,151,58,.35);
+}
+
+/* ================================================
+   MESSAGE SUCCÈS
+   ================================================ */
+.msg-success {
+  display: none;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ================================================
+   IMPRESSION
+   ================================================ */
+@media print {
+  body { background: #fff; padding: 0; }
+  .topbar { display: none; }
+  .page {
+    box-shadow: none;
+    border-top: none;
+    width: 100%;
+    padding: 10mm 16mm;
+  }
+  .page::before { display: none; }
+  .no-print { display: none !important; }
+  .champ:focus {
+    background: transparent;
+    border-color: #aaa;
+    border-radius: 0;
+  }
+}
+
+/* ================================================
+   RESPONSIVE MOBILE
+   ================================================ */
+@media (max-width: 740px) {
+  body { padding: 10px 4px 60px; }
+  .topbar { width: 100%; }
+  .page { width: 100%; padding: 14px 14px 18px; }
+  .titre-box { margin: 0 0 20px; }
+  .champ-ligne { flex-wrap: wrap; }
+  .champ.flex, .champ-input.flex { width: 100%; }
+  .section-header { flex-wrap: wrap; }
+}
